@@ -1,0 +1,630 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+  overflow-x:hidden ;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding: 1rem 5%;
+}
+
+.header{
+  display: flex;
+  background:#fff;
+  padding: 2rem 5rem;
+  justify-content: space-between;
+  box-shadow: 0 .5rem 5rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0; left: 0; right: 0; 
+  z-index: 2;
+}
+
+.logo{
+  display: flex;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.logo p{
+  margin:0 5px;
+  font-weight: bold;
+}
+
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar ul li{
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-right: 3rem;
+  color: black;
+  text-transform: uppercase;
+  transition: all .4s linear;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover{
+  color: gray;
+}
+
+.notification i{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.notification i:hover{
+  color: gray;
+}
+
+.home{
+  padding-top: 10rem;
+  height: 100vh;
+}
+
+.home-container{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container{
+  margin-top: 2.5rem;
+}
+
+
+.text-container h1{
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+
+.button .btn{
+  margin-top: 4rem;
+  position: relative;
+  --border:3px solid #000;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  border: none;
+}
+.button .btn span{
+  display: block;
+  position: relative;
+  padding: 1rem 1rem;
+  background: #fff;
+  color: #000;
+  border: var(--border);
+  transition: transform 0.2s ease;
+  z-index: 1;
+  will-change: transform;
+}
+.button .btn::after{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 5px);
+  height:calc(100% - 5px); 
+  background-color: rgb(86, 83, 83);
+  border: var(--border);
+}
+.button .btn:hover span{
+  transform: translate(4px, 4px);
+}
+.button .btn:active span{
+  transition: transform 0.05s ease;
+  transform: translate(0, 0);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container i{
+  font-size: 1.7rem;
+  margin: 2rem 1rem;
+}
+.icon-container i:hover{
+  color: gray;
+}
+
+.about{
+  height: 100vh;
+}
+
+.textheader{
+  margin-top: 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 4rem;
+  pointer-events: none;
+  color: transparent;
+  -webkit-text-stroke: .05rem black;
+}
+
+.about-container{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-about{
+  width: 100%;
+}
+
+.text-about h2{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.text-about p{
+  margin: 3rem 0 0;
+  text-align: left;
+}
+
+.image-about{
+  width: 100%;
+  padding: 2rem;
+}
+
+.image-about img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.icons-container{
+  display: flex;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.icon-about{
+  border: 2px solid gray;
+  margin-right: 1.5rem;
+  border-radius: 5px;
+  width: 160px;
+  height: 160px;
+  border-style: dashed ;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.icon-about:hover{
+  border-style: solid;
+}
+
+.icon-about img{
+  width: 80px;
+  
+}
+
+.shop{
+  height: 150vh;
+}
+
+.container{
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; /* កម្លាតសងខាង */
+}
+
+.container .iteam{
+  width: 20vw;
+  border-radius: 4px;
+}
+
+.product{
+  text-align: center;
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  font-family: cursive;
+  text-transform: capitalize;
+}
+
+.product h1{
+  font-size: 1.5rem;
+  margin: .5rem 0 .5rem;
+}
+
+.product span{
+  font-size: 1rem;
+}
+
+.product button{
+  margin: 0.5rem 0 .5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  transition: all .4s linear;
+  cursor: pointer;
+}
+
+.product button:hover{
+  transform: scale(1.1);
+}
+
+.book{
+  height: 100vh;
+}
+
+.book-center{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.book-container{
+  border: 5px solid gray;
+  padding: 3em 0 2rem;
+  display: flex;
+  justify-content: center;
+  width: 650px;
+  border-style: double;
+}
+
+input{
+  display: block;
+  margin-bottom: 1rem;
+  padding: 15px;
+  width: 500px;
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid gray;
+  background-color: transparent;
+}
+
+textarea{
+  display: block;
+  font-size: 1rem;
+  width: 500px;
+  padding-left: 15px;
+  outline: none;
+  border: 2px solid gray;
+  background-color: transparent;
+}
+
+.book-container .button{
+  margin-top: 0rem;
+}
+
+.review{
+  height: 100vh;
+}
+
+.conteudo{
+  margin-top: 1rem;
+}
+
+.carrousel{
+  display: grid;
+  grid-auto-flow: column; /*តម្រៀបជាជួរដេក */
+  scroll-behavior: auto;
+  gap: 1.2rem; /*គម្លៀត*/
+  overflow-y: auto; /*សញ្ញាសម្រាប់ Scroll */
+  overscroll-behavior-x: contain ;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  
+}
+
+.carrousel::-webkit-scrollbar{
+  display: none; /*Deleteសញ្ញាសម្រាប់ Scroll */
+}
+
+.conteudo{
+  margin-top: 3rem;
+}
+
+.card{
+  scroll-snap-align: start; /*scroll on image*/
+  padding: 2rem;
+  border-radius: 5px;
+  border: 5px solid gray;
+  border-style:double;
+  text-transform: capitalize;
+}
+
+.card i{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.card img{
+  width: 400px;
+  border-radius: 50%;
+}
+
+.card h2{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  
+}
+
+.card-icon{
+  display: flex;
+  justify-content: center;
+}
+
+.card-icon i{
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.card p{
+  font-size: 15px;
+}
+
+.foot-container{
+  display: flex;
+  background-color: rgb(46, 43, 43);
+}
+
+.foot{
+  width: 35%;
+  
+}
+
+.foot h3{
+  margin: 2rem 5rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.foot a{
+  display: block;
+  text-decoration: none;
+  margin: 1rem 5rem;
+  color: #fff;
+}
+
+#menu-icon{
+  font-size: 1.2rem;
+  display: none;
+  color: black;
+}
+
+
+
+@media (max-width:992px){
+  .header{
+    padding: 1.25rem 4%;
+  }
+}
+
+@media (max-width:768px){
+
+  html{
+    scroll-padding-top: 4rem;
+  }
+  
+  #menu-icon{
+    display: block;
+  }
+
+  .logo {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .logo p{
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .navbar{
+    position: fixed;
+    top: 6%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: .5rem 4%;
+    background-color: #fff;
+    border-bottom: 2px solid gray;
+    display: none;
+  }
+
+  .navbar.active{
+    display: block;
+  }
+
+  .navbar ul {
+    display: block;
+  }
+
+  .navbar ul li {
+    margin: 1.5rem 0;
+  }
+
+  .navbar ul li a{
+    font-size: 1rem;
+  }
+
+  .notification i{
+    font-size: 1rem;
+  }
+
+  #menu-icon{
+    font-size: 1rem;
+  }
+
+  .home{
+    padding-top: 5rem;
+    height: 110vh;
+  }
+
+  .home-container{
+    flex-direction: column;
+    margin-top: 0rem;
+  }
+
+  .text-container{
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .text-container h1{
+    font-size: 3rem;
+  }
+
+  .button .btn{
+    margin-top: 2rem;
+    font-size: 12px;
+  }
+
+  .button .btn span{
+    padding: 0.7rem 0.7rem;
+  }
+
+  .image-banner img{
+    width: 100%;
+  }
+
+  .about{
+    height: 125vh;
+  }
+
+
+  .about-container{
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .image-about{
+    width: 100%;
+  }
+
+  .text-about h2{
+    font-size: 1.8rem;
+  }
+
+  .text-about p{
+    margin-top: 2rem;
+    font-size: 15px;
+  }
+
+  .icon-about{
+    border: 2px solid gray;
+    margin-right: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 6px;
+    border-style: double ;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+  .shop{
+    height: 180vh;
+  }
+
+  .container{
+    margin-top: 2rem;
+    padding: 0;
+    gap: 16px;
+  }
+
+  .container .iteam{
+    width: 41.5vw;
+    border-radius: 3px;
+    
+  }
+  .product h1{
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  .product span{
+    margin: 1rem;
+  }
+  .product button{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .book{
+    height: 110vh;
+  }
+
+  .book-container{
+    width: 500px;
+  }
+
+  input{
+    width: 270px;
+  }
+
+  textarea{
+    width: 270px;
+  }
+
+  .review{
+    height: 90vh;
+  }
+
+  .card{
+    padding: 1rem;
+  }
+
+  .card img{
+    width: 150px;
+  }
+
+  .card h2{
+    font-size: 1rem;
+  }
+
+  .card-icon i{
+    font-size: 1rem;
+  }
+
+  .card p{
+    font-size: 12px;
+  }
+
+  .foot h3{
+    font-size: 1rem;
+    margin:.5rem;
+  }
+
+  .foot a{
+    margin: 1rem;
+    font-size: .7rem;
+  }
+  
+}
+
+
+
+
+
